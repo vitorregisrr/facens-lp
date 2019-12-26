@@ -1,0 +1,54 @@
+.form-control {
+    width: 100%;
+    padding: 5px;
+    border-radius: 0;
+    border: 1px solid black;
+    color: $color-secondary;
+    font-size: 13px;
+    font-weight: 400;
+    @include transition();
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: black;
+    }
+}
+
+.form-black{
+    padding-left: 14px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.form-quantity {
+    width: 68px;
+    height: 48px;
+    border-color: #CCCC;
+    padding: 5px 8px 5px 13px;
+    font-weight: 500;
+    color: black !important;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}   
+
+textarea.form-control {
+    height: auto;
+}
+
+.form-group {
+    label.error {
+        display: block;
+        color: rgb(240, 80, 69);
+        opacity: .8;
+        font-size: 13px;
+        font-weight: 400;
+        padding-top: 5px;
+        padding-left: 4px;
+    }
+}

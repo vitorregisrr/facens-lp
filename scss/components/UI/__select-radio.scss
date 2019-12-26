@@ -1,0 +1,95 @@
+.custom-select--radio {
+    position: relative;
+    margin: 0 10px;
+    width: 110px !important;
+    
+    @media screen and (max-width: 360px) {
+        margin: 0 3px;
+    }
+    
+    .pc-select, .pc-trigger{
+        width: 110px !important;
+    }
+
+    .pc-trigger {
+        cursor: pointer !important;
+        position: relative;
+        padding: 8px 25px 8px 13px !important;
+        background-color: #fff;
+        border: 1px solid #d6d6d6;
+        color: black;
+        z-index: 2;
+        @include transition();
+        
+        &:hover{
+            background-color: black !important;
+        }
+
+        &:after {
+            content: '\f078';
+            position: absolute;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            right: 10px;
+            font-size: 9px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .pc-list {
+        cursor: pointer;
+        position: absolute;
+        right: 10%;
+        top: 150%;
+        width: 200px !important;
+        box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.144);
+        background-color: #fff;
+        border: none !important;
+        z-index: 10;
+        padding: 0;
+        max-height: 60vh;
+
+        @media screen and (max-width: $bp-MD) {
+            right: unset;
+            left: 50%;
+            width: 150px;
+            transform: translateX(-50%);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                position: relative;
+                padding: 10px 15px !important;
+                padding-left: 30px;
+                display: flex;
+                min-height: 30px;
+                align-items: center;
+                font-size: 13px;
+                text-transform: uppercase;
+                text-align: left;
+                @include transition();
+
+                @media screen and (max-width: $bp-MD) {
+                    font-size: 11px;
+                    padding-left: 22px;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgb(214, 214, 214);
+                }
+
+                &:hover {
+                    background-color: black !important;
+                    &:after {
+                        background-color: rgba(0, 0, 0, 0.322);
+                    }
+                }
+
+            }
+        }
+    }
+}
