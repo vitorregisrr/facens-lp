@@ -17,15 +17,12 @@
 body {
     position: relative;
     margin: 0;
-    background-color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
+    background-color:$color-dark;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
     overflow-x: hidden;
-    font-weight: 300;
-    font-size: 13px;
-    color: $color-primary;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     @media screen and (max-width: $bp-MD){
         font-size: 15px;
@@ -34,13 +31,4 @@ body {
 
 html{
     overflow-x: hidden;
-}
-
-main{
-    padding-top: 192px;
-
-    @media screen and (max-width: $bp-LG){
-        padding-top: 154px;
-    }
-
 }

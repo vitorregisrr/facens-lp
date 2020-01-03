@@ -1,0 +1,151 @@
+.home-banner {
+    position: relative;
+    padding-top: 80px;
+    z-index: 3;
+    height: 1000px;
+    background-image: url(../images/backgrounds/home-bg.png);
+    background-position: 50% bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0d1824;
+    animation: fadeIn 0.4s;
+    min-height: 670px;
+
+    @media screen and (max-width: $bp-MD) {
+        height: auto;
+        padding-bottom: 80px;
+        background-position: 28% bottom;
+    }
+
+    @media screen and (max-width: $bp-LG) {
+        padding-top: 60px;
+    }
+
+    @media screen and (max-width: $bp-MD) {
+        padding-top: 40px;
+        padding-left: 15px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        padding: 16px 30px;
+        font-size: 16px;
+
+        @media screen and (max-width: $bp-MD) {
+            margin: 0 auto;
+            margin-top: 35px;
+            font-size: 14px;
+        }
+
+        &-ico {
+            display: inline-block;
+            width: 30px;
+            height: 26px;
+            background-image: url(../images/ico/checkin.png);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 13px;
+
+            @media screen and (max-width: $bp-MD) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media screen and (max-width: 330px) {
+            font-size: 13px;
+        }
+    }
+
+    &__caption {
+        color: $color-primary;
+        font-size: 57px;
+        margin-top: 55px;
+        font-family: 'Garamond Bold';
+
+        @media screen and (max-width: $bp-LG) {
+            font-size: 45px;
+        }
+
+        @media screen and (max-width: $bp-MD) {
+            margin-top: 55px;
+            font-size: 47px;
+            line-height: 46px;
+        }
+
+        @media screen and (max-width: 330px) {
+            margin-top: 35px;
+            font-size: 37px;
+        }
+
+        hr {
+            width: 200px;
+            height: 8px;
+            background-color: none;
+            background-image: url(../images/ico/divisor.png);
+            background-size: contain;
+            background-position: center left;
+            background-repeat: no-repeat;
+            margin: 8px 0 -5px 0;
+
+            @media screen and (max-width: $bp-MD) {
+                margin: 15px auto 9px auto;
+                background-position: center center;
+            }
+        }
+
+        span {
+            color: #fff;
+            font-size: 76px;
+
+            @supports (-webkit-text-stroke: 1px black) {
+                -webkit-text-stroke: 0.6px #fff;
+                color: transparent;
+            }
+
+            @media screen and (max-width: $bp-MD){
+                font-size: 60px;
+            }
+
+            @media screen and (max-width: 330px) {
+                font-size: 50px;
+            }
+
+        }
+    }
+
+    &__more {
+        display: block;
+        width: 80px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 11px;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 110px;
+        color: $color-primary;
+        @include transition();
+
+        @media screen and (max-width: $bp-MD) {
+            text-align: center;
+            width: 100%;
+            margin-top: 90px;
+        }
+
+        &:hover {
+            color: $color-primary;
+            @include scale(1.05);
+        }
+
+        i {
+            font-size: 18px;
+        }
+    }
+}

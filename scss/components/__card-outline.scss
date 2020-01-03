@@ -1,0 +1,72 @@
+.card-outline {
+    margin-bottom: 18px;
+    
+    &-header {
+        padding: 15px 15px;
+        border: 1px solid $color-primary;
+        border-radius: 8px;
+
+        button {
+            position: relative;
+            width: 100%;
+            background: none;
+            border: none;
+            color: $color-primary !important;
+            text-align: left;
+            font-size: 24px;
+            font-family: 'Garamond';
+            @include transition();
+
+            @media screen and (max-width: $bp-MD){
+                font-size: 20px;
+            }
+
+            &:after{
+                content: '+';
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                font-size: 32px;
+                font-weight: 300;
+                transform: translateY(-50%);
+
+                @media screen and (max-width: $bp-MD){
+                    font-size: 25px;
+                }
+            }
+
+            &[aria-expanded="true"]{
+                &:after{
+                    content: '-';
+                    margin-bottom: 10px;
+                    
+                    @media screen and (max-width: $bp-MD){
+                        font-size: 29px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-body{
+        padding: 33px 50px 20px 30px;
+
+        @media screen and (max-width: $bp-MD){
+            padding-right: 0px;
+            padding-left: 20px;
+            padding-top: 22px;
+            font-size: 14px;
+        }
+
+        h5{
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        p{
+            margin-bottom: 25px;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.curso-pg {
+    position: relative;
+    padding-top: 100px;
+    z-index: 3;
+    background-image: url(../images/backgrounds/interna-bg.png);
+    background-position: 50% top;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    margin-bottom: 160px;
+    overflow: show;
+    
+    @media screen and (min-width: 1600px){
+        background-size: 100%;
+    }
+
+    @media screen and (min-width: 1900px){
+        background-size: 70%;
+    }
+
+    @media screen and (max-width: $bp-XL){
+        padding-top: 60px;
+        margin-bottom: 70px;
+        background-size: 160%;
+    }
+
+    @media screen and (max-width: $bp-LG){
+        padding-top: 60px;
+        margin-bottom: 70px;
+    }
+    
+    @media screen and (max-width: $bp-MD){
+        height: auto;
+        padding-bottom: 80px;
+        padding-top: 40px;
+        padding-left: 15px;
+        margin-bottom: 70px;
+        background-size: 500%;
+    }
+
+    &__map {
+        color: $color-primary;
+        line-height: 20px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: 10px;
+        
+        @media screen and (max-width: $bp-MD){
+            margin: 0 0 30px 0;
+            font-size: 9px;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            color: $color-primary !important;
+            text-transform: uppercase;
+            font-weight: lighter;
+            letter-spacing: 0.4px;
+            @include transition();
+
+            &:hover{
+                @include scale(1.02);
+            }
+            
+        }
+
+        @media screen and (max-width: $bp-LG) {
+            font-size: 9px;
+        }
+    }
+
+    &__title{
+        color: $color-primary;
+        font-size: 30px;
+        margin-bottom: 24px;
+        font-weight: bold;
+        font-family: 'Garamond Bold';
+        letter-spacing: 0.9px;
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 22px;
+        }
+    }
+
+    &__desc{
+        font-size: 16px;
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 14px;
+        }
+    }
+
+    &__divisor{
+        width: 180px;
+        height: 9px;
+        background-color: none;
+        background-image: url(../images/ico/divisor.png);
+        background-size: contain;
+        background-position: center left;
+        background-repeat: no-repeat;
+        margin: 6px 0 0 0;
+
+        &.center{
+            @media screen and (max-width: $bp-LG){
+                margin: 6px auto 4px auto;
+                background-position: center center;
+            }
+        }
+    }
+
+    &__content{
+        font-size: 16px;
+        
+        @media screen and (max-width: $bp-MD){
+            font-size: 14px;
+        }
+
+        h3{
+            color: $color-primary;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            font-family: 'Garamond';
+
+            @media screen and (max-width: $bp-MD){
+                font-size: 20px;
+            }
+        }
+    }
+}

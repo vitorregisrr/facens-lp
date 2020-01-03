@@ -154,7 +154,7 @@ gulp.task('copyRecursiveVendorFiles', function () {
 /*Building vendor scripts needed for basic template rendering*/
 gulp.task('buildBaseVendorScripts', function () {
     return gulp
-        .src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/wowjs/dist/wow.min.js', './node_modules/lazyload/lazyload.js', './node_modules/owl.carousel/dist/owl.carousel.min.js', './node_modules/bootstrap/dist/js/bootstrap.min.js', './node_modules/jquery-validation/dist/jquery.validate.min.js', './node_modules/select-picker/dist/picker.min.js'])
+        .src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/wowjs/dist/wow.min.js', './node_modules/bootstrap/dist/js/bootstrap.min.js', './node_modules/jquery-validation/dist/jquery.validate.min.js', './node_modules/select-picker/dist/picker.min.js', './node_modules/simplebar/dist/simplebar.min.js'])
         .pipe(concat('vendor.bundle.base.js'))
         .pipe(gulp.dest('./vendors/js'));
 });
@@ -162,7 +162,7 @@ gulp.task('buildBaseVendorScripts', function () {
 /*Building vendor styles needed for basic template rendering*/
 gulp.task('buildBaseVendorStyles', function () {
     return gulp
-        .src(['./node_modules/animate.css/animate.min.css', './node_modules/bootstrap/dist/css/bootstrap.min.css', './node_modules/owl.carousel/dist/assets/owl.carousel.min.css', './node_modules/select-picker/dist/picker.min.css'])
+        .src(['./node_modules/animate.css/animate.min.css', './node_modules/bootstrap/dist/css/bootstrap.min.css', './node_modules/owl.carousel/dist/assets/owl.carousel.min.css', './node_modules/select-picker/dist/picker.min.css',  './node_modules/simplebar/dist/simplebar.min.css'])
         .pipe(concat('vendor.bundle.base.css'))
         .pipe(gulp.dest('./vendors/css'));
 });

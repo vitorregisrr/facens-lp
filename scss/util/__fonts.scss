@@ -1,6 +1,13 @@
 @font-face {
-    font-family: 'Myriad Pro Regular';
+    font-family: 'Garamond';
     font-style: normal;
     font-weight: normal;
-    src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.woff') format('woff');
+    src: local('Garamond'), url('../fonts/garamond.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Garamond Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Garamond Bold'), url('../fonts/garamond-b.woff') format('woff');
 }

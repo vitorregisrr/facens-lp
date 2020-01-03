@@ -1,0 +1,32 @@
+.banner-conheca{
+    padding: 180px 0 100px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: -100px;
+    background-color: #0d1824;
+    background-image: url('../images/backgrounds/top-curves.jpg');
+    background-position: top  top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $bp-LG){
+        padding: 80px 0 60px 0;
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: $bp-MD){
+        padding-top: 70px;
+        margin-top: -70px;
+    }
+
+    &__desc{
+        font-size: 16px;
+        max-width: 690px;
+        margin: 35px 0 25px;
+
+        @media screen and (max-width: $bp-LG){
+            font-size: 15px;
+        }
+    }
+}

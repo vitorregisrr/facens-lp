@@ -1,0 +1,104 @@
+.custom-select {
+    position: relative;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+
+    @media screen and (max-width: 360px) {
+        margin: 0 3px;
+    }
+
+    .pc-trigger {
+        cursor: pointer !important;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid $color-primary;
+        background: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+        @include transition();
+        
+        &:hover{
+            background-color: rgba(2, 0, 0, 0.116) !important;
+        }
+
+        &:after {
+            content: '\f0d7';
+            position: absolute;
+            font-family: "Font Awesome 5 Free";
+            color: $color-primary;
+            font-weight: 900;
+            right: 10px;
+            font-size: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .pc-select{
+        width: 100% !important;
+        max-width: unset !important;
+    }
+
+    .pc-list {
+        cursor: pointer;
+        position: absolute;
+        right: 10%;
+        top: 150%;
+        width: 100% !important;
+        box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.144);
+        background-color: #fff;
+        border: none !important;
+        z-index: 10;
+        padding: 0;
+        max-height: 30vh;
+        
+        @media screen and (max-width: $bp-MD) {
+            right: unset;
+            left: 50% !important;
+            width: 150px;
+            transform: translateX(-50%);
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            
+            li {
+                position: relative;
+                padding: 10px 15px !important;
+                padding-left: 30px;
+                display: flex;
+                min-height: 30px;
+                align-items: center;
+                font-size: 13px;
+                text-align: left;
+                @include transition();
+
+                @media screen and (max-width: $bp-MD) {
+                    font-size: 12px;
+                    padding-left: 22px;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-primary;
+                }
+
+                &:hover {
+                    background-color: $color-primary !important;
+                    
+                    &:after {
+                        background-color: rgba(0, 0, 0, 0.322);
+                    }
+                }
+
+            }
+        }
+    }
+}

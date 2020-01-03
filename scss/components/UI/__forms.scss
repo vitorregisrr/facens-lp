@@ -2,53 +2,31 @@
     width: 100%;
     padding: 5px;
     border-radius: 0;
-    border: 1px solid black;
-    color: $color-secondary;
+    border: 1px solid $color-primary;
+    background: none;
+    border-radius: 8px;
+    padding: 9px 20px;
+    color: #fff;
     font-size: 13px;
     font-weight: 400;
     @include transition();
 
-    &:focus {
+    &:focus, &:active {
         box-shadow: none;
+        background-color: rgba(2, 0, 0, 0.116);
+        color: #fff;
         outline: none;
-        border-color: black;
+        border: 1px solid $color-primary;
     }
 }
 
-.form-black{
-    padding-left: 14px;
-    font-size: 14px;
-    color: #666666;
-}
+.form-group{
+    margin-bottom: 20px;
 
-.form-quantity {
-    width: 68px;
-    height: 48px;
-    border-color: #CCCC;
-    padding: 5px 8px 5px 13px;
-    font-weight: 500;
-    color: black !important;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {  
-
-   opacity: 1;
-
-}   
-
-textarea.form-control {
-    height: auto;
-}
-
-.form-group {
-    label.error {
-        display: block;
-        color: rgb(240, 80, 69);
-        opacity: .8;
-        font-size: 13px;
-        font-weight: 400;
-        padding-top: 5px;
-        padding-left: 4px;
+    label{
+        color: $color-primary;
+        font-weight: bold;
+        font-size: 15px;
+        text-align: left;
     }
 }

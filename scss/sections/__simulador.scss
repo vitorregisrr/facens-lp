@@ -1,0 +1,50 @@
+.simulador{
+    display: none;
+    position: relative;
+    padding-top: 80px;
+    z-index: 3;
+    min-height: 1010px;
+    background-image: url(../images/backgrounds/interna-bg.png);
+    background-position: 50% bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0d1824;
+
+    @media screen and (max-width: $bp-MD){
+        height: auto;
+        padding-bottom: 80px;
+    }
+    
+    @media screen and (max-width: $bp-LG){
+        padding-top: 60px;
+        text-align: center;
+    }
+    
+    @media screen and (max-width: $bp-MD){
+        padding-top: 40px;
+        padding-left: 15px;
+    }
+
+    &.active{
+        display: block;
+        animation: fadeIn 0.8s;
+    }
+
+    &__steps{
+        padding-left: 80px;
+
+        @media screen and (max-width: $bp-XL) {
+            padding-left: 60px;
+        }
+
+        @media screen and (max-width: $bp-LG) {
+            padding-left: 0;
+        }
+    }
+
+    .btn-primary{
+        margin-top: 20px;
+        font-size: 17px;
+        padding: 15px 40px;
+    }
+}
