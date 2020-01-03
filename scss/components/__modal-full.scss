@@ -1,0 +1,41 @@
+.modal-full{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: $color-dark;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 60px;
+    overflow-y: scroll;
+    display: none;
+
+    &.active{
+        display: block;
+        animation: fadeIn 0.8s;
+    }
+
+    @media screen and (max-width: $bp-MD){
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+
+    &__close{
+        position: absolute;
+        right: 0;
+        top: 35%;
+        transform: translateY(-50%);
+        color: $color-primary;
+        background: none !important;
+        border: none !important;
+        font-family: 'Garamond Bold';
+        font-size: 17px;
+        @include transition();
+
+        @media screen and (max-width: $bp-MD){
+            top: 5px;
+            right: 10px;
+        }
+    }
+}

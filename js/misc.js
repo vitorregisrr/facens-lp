@@ -32,8 +32,12 @@
     customSelects.picker({
         containerClass: 'custom-select'
     });
-
     $('.pc-list').attr('data-simplebar', true);
+
+    // Remove a primeira opção dos data-title, que na verdade vai servir apenas como título
+    $('.pc-list').each(function () {
+        $(this).find('ul li')[0].remove();
+     });
 
     //  Cursos filtering
     
@@ -77,6 +81,11 @@
         }
         return value;
     }
+
+    // Toggle modal inscrição
+    $('[data-toggle="modal-inscricao"]').click( function(){
+        $('#modal-inscricao').toggleClass('active');
+    });
 
     window.dispatchEvent(new Event('resize'));
 })();

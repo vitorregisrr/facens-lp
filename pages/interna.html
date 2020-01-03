@@ -4,7 +4,7 @@
 <head>
     <!-- partial:../partials/__head.html -->
 
-                  <meta charset="UTF-8">
+        <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Facens Pós-Graduação</title>
@@ -48,6 +48,7 @@
 
   <!-- Custom JS -->
   <script src="../js/misc.js" async defer></script>
+  <script src="../js/inscricao.js" async defer></script>
   <script src="../js/simulador.js" async defer></script>
   <script src="../js/carousels.js" async defer></script>
   
@@ -61,7 +62,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-                <!-- partial -->
+      <!-- partial -->
 </head>
 
 <body class=" wow fadeIn">
@@ -100,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row justify-content-between">
                     <div class="col-lg-7 col-xl-6">
                         <h2 class="curso-pg__title wow fadeInUp">
                             Gestão de projetos e inovação com certificação internacional
@@ -112,7 +113,13 @@
                             quae?
                         </p>
 
+                        <button data-toggle="modal-inscricao"
+                            class="btn btn-primary btn-md wow fadeInRight d-block d-lg-none">Inscreva-se</button>
                         <hr class="curso-pg__divisor mb-4 mb-lg-4 mt-4  wow fadeInUp" data-wow-delay="0.4s">
+                    </div>
+                    <div class="col-2 d-none d-lg-block">
+                        <button data-toggle="modal-inscricao"
+                            class="btn btn-primary btn-lg wow fadeInRight">Inscreva-se</button>
                     </div>
                 </div>
 
@@ -141,6 +148,9 @@
                                 autem. Quia atque optio illum quam quae assumenda mollitia.
                             </p>
                         </div>
+
+                        <button data-toggle="modal-inscricao"
+                            class="btn btn-primary btn-lg wow fadeInLeft my-3 my-lg-4">Inscreva-se</button>
 
                         <div id="accordion" class="pt-4">
                             <div class="card-outline wow fadeIn">
@@ -188,7 +198,7 @@
                                             molestiae nobis modi itaque doloribus id totam obcaecati ea tempora
                                             iure.
                                         </p>
-                                        
+
                                         <ul class="list-white">
                                             <li class="mb-3">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id doloribus
@@ -336,6 +346,127 @@
         </section>
 
     </main>
+
+    <aside class="modal-full" id="modal-inscricao">
+        <div class="modal-full__content">
+            <div class="container">
+                <div class="row position-relative">
+                    <div class="col-12">
+                        <div class="modal-full__header mb-5 pb-md-4">
+                            <h1 class="header-title animated fadeIn pl-0">
+                                Invista no seu futuro!
+                                <hr class="curso-pg__divisor animated fadeInUp center">
+                            </h1>
+                        </div>
+                        <button data-toggle="modal-inscricao" class="modal-full__close">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+                <form id="inscricao-form"
+                    action="https://meuportalcare.force.com/portaldocandidatofacens/FacensLogin?inst=1C" method="POST"
+                    class="row" target="_blank">
+
+                    <input type="hidden" name="oid" value="00D15000000NPmK">
+                    <input type="hidden" id="lead_source" name="lead_source" value="Website">
+                    <input type="hidden" id="input_candidato" name="input_candidato" value="true">
+                    <input type="hidden" id="00N1500000HoJTd" name="00N1500000HoJTd" value="Facens" title="Grupo">
+                    <input type="hidden" id="00N1500000I2bOy" name="00N1500000I2bOy" title="Tipo de Ensino"
+                        value="Pós Graduação">
+                    <input type="hidden" id="00N1500000HQeCM" name="00N1500000HQeCM" value="Pós graduação">
+                    <input type="hidden" id="tipo_de_ingresso" name="tipo_de_ingresso" value="true">
+                    <input type="hidden" id="Tipo_de_Ensino__c" name="Tipo_de_Ensino__c" class="Tipo_de_Ensino__c"
+                        value="Pós Graduação">
+                    <input type="hidden" id="Ingresso_de_interesse__c" name="Ingresso_de_interesse__c"
+                        value="Pós graduação">
+
+                    <div class="col-lg-6">
+                        <div class="form-group animated fadeInUp">
+                            <input type="hidden" name="campaign_id" id="campaign_id">
+
+                            <label for="insc-select-mod">Modalidade</label>
+                            <select id="insc-select-mod" name="Modalidade__c" class="custom_select">
+                                <option value="" selected>Selecione uma opção</option>
+                                <option value="Presencial">Presencial</option>
+                                <option value="EAD">EAD</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group animated fadeInUp">
+                            <label for="insc-select-cur">Curso de interesse</label>
+                            <input id="insc-select-cur" type="hidden" name="Curso_de_interesse__c" value="">
+
+                            <div id="insc-select-container">
+                                <!-- Exibido se não tiver modalidade selecionada -->
+                                <div id="insc-select-cur-1">
+                                    <select class="custom_select select-curso" disabled>
+                                        <option value="1" selected>Selecione uma modalidade</option>
+                                    </select>
+                                </div>
+
+                                <!-- Exibido se for modalidade presencial -->
+                                <div id="insc-select-cur-2" style="display: none;">
+                                    <select class="custom_select select-curso">
+                                        <option value="" selected>Selecione uma opção</option>
+                                        <option value="1" selected>Curso presencial 1</option>
+                                        <option value="2">Curso presencial 2</option>
+                                    </select>
+                                </div>
+
+                                <!-- Exibido se for modalidade EAD -->
+                                <div id="insc-select-cur-3" style="display: none;">
+                                    <select class="custom_select select-curso">
+                                        <option value="" selected>Selecione uma opção</option>
+                                        <option value="1" selected>Curso EAD 1</option>
+                                        <option value="2" selected>Curso EAD 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group animated fadeInUp">
+                            <label for="insc-nome">Nome completo</label>
+                            <input id="insc-nome" type="text" class="form-control" name="last_name"
+                                placeholder="Digite seu nome completo">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="form-group animated fadeInUp">
+                            <label for="insc-cpf">CPF</label>
+                            <input id="insc-cpf" type="text" class="form-control" name="CPF__c"
+                                placeholder="Digite seu CPF (apenas números)">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="form-group animated fadeInUp">
+                            <label for="insc-celular">Celular</label>
+                            <input id="insc-celular" type="text" class="form-control" name="mobile"
+                                placeholder="Digite seu celular">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group animated fadeInUp">
+                            <label for="insc-email">E-mail</label>
+                            <input id="insc-email" type="text" class="form-control" name="email"
+                                placeholder="Digite seu e-mail">
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary btn-lg animated fadeInRight">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </aside>
     <button class="scroll-top"></button>
 </body>
 
