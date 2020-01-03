@@ -16,7 +16,7 @@
 .inner-title {
   color: black;
   font-weight: 500;
-  font-size: 53px;
+  font-size: 62px;
   color: #CFAF67;
   font-family: 'Garamond Bold';
   line-height: 0.9;
@@ -24,22 +24,22 @@
 
 @media screen and (max-width: 992px) {
   .inner-title {
-    font-size: 38px;
+    font-size: 40px;
   }
 }
 
 .inner-title span {
   display: block;
   color: #fff;
-  font-size: 35px;
+  font-size: 39px;
   font-family: 'Garamond';
-  letter-spacing: 1.7px;
+  letter-spacing: 1.4px;
   margin-top: 10px;
 }
 
 @media screen and (max-width: 992px) {
   .inner-title span {
-    font-size: 22px;
+    font-size: 26px;
     margin-top: 14px;
   }
 }
@@ -1245,6 +1245,12 @@ u {
   padding: 13px 30px;
 }
 
+@media screen and (max-width: 992px) {
+  .btn.btn-lg {
+    font-size: 16px;
+  }
+}
+
 .btn.btn-md {
   font-size: 14px;
   padding: 16px 30px;
@@ -1252,7 +1258,7 @@ u {
 
 @media screen and (max-width: 992px) {
   .btn.btn-md {
-    font-size: 13px;
+    font-size: 15px;
     padding: 14px 32px;
   }
 }
@@ -1573,15 +1579,15 @@ u {
   transform: translateX(-50%);
   background-color: #CFAF67;
   color: #1C2830;
-  border-radius: 5px;
-  padding: 4px 16px;
+  border-radius: 7px;
+  padding: 4px 17px;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
 .curso-card__modalidade {
-  font-size: 10px;
+  font-size: 11px;
   margin-bottom: 10px;
   font-weight: 300;
   text-transform: uppercase;
@@ -1589,7 +1595,7 @@ u {
 }
 
 .curso-card__title {
-  font-size: 22px;
+  font-size: 24px;
   color: #CFAF67;
   font-weight: 300;
   line-height: 27px;
@@ -1613,6 +1619,7 @@ u {
 }
 
 .curso-card .btn {
+  font-size: 16px;
   width: 95%;
   margin: 0 auto;
 }
@@ -1621,7 +1628,7 @@ u {
   color: #CFAF67 !important;
   text-decoration: underline !important;
   margin-top: 15px;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -1629,9 +1636,9 @@ u {
   position: relative;
   padding-top: 80px;
   z-index: 3;
-  height: 1000px;
+  height: 1100px;
   background-image: url(../images/backgrounds/home-bg.png);
-  background-position: 50% bottom;
+  background-position: 30% bottom;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #0d1824;
@@ -1667,9 +1674,9 @@ u {
 .home-banner__btn {
   display: flex;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 40px;
   padding: 16px 30px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1682,13 +1689,13 @@ u {
 
 .home-banner__btn-ico {
   display: inline-block;
-  width: 30px;
-  height: 26px;
+  width: 33px;
+  height: 29px;
   background-image: url(../images/ico/checkin.png);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 13px;
+  margin-right: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1706,7 +1713,7 @@ u {
 
 .home-banner__caption {
   color: #CFAF67;
-  font-size: 57px;
+  font-size: 66px;
   line-height: 53px;
   margin-top: 55px;
   font-family: 'Garamond Bold';
@@ -1714,7 +1721,7 @@ u {
 
 @media screen and (max-width: 992px) {
   .home-banner__caption {
-    font-size: 45px;
+    font-size: 65px;
   }
 }
 
@@ -1741,7 +1748,7 @@ u {
   background-size: contain;
   background-position: center left;
   background-repeat: no-repeat;
-  margin: 20px 0 -5px 0;
+  margin: 35px 0 10px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1753,7 +1760,7 @@ u {
 
 .home-banner__caption span {
   color: #fff;
-  font-size: 76px;
+  font-size: 83px;
   line-height: 80px;
 }
 
@@ -1835,7 +1842,7 @@ u {
 @media screen and (max-width: 992px) {
   .lista-cursos__filters {
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 15px 0;
   }
 }
@@ -1866,13 +1873,13 @@ u {
 }
 
 .banner-about__desc {
-  font-size: 17px;
+  font-size: 20px;
   max-width: 650px;
 }
 
 @media screen and (max-width: 992px) {
   .banner-about__desc {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -1894,6 +1901,7 @@ u {
   .banner-about__icons {
     flex-direction: column;
     align-items: center;
+    margin: 40px 0;
   }
 }
 
@@ -1901,12 +1909,18 @@ u {
   display: flex;
   align-items: flex-start;
   color: #CFAF67;
-  font-size: 20px;
+  font-size: 23px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .banner-about__icons-item {
-    font-size: 15px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-about__icons-item {
+    font-size: 19px;
   }
 }
 
@@ -1915,14 +1929,14 @@ u {
 }
 
 .banner-about__icons-item img {
-  width: 90px;
+  width: 95px;
   margin-right: 24px;
 }
 
 @media screen and (max-width: 992px) {
   .banner-about__icons-item img {
     width: 80px;
-    margin-right: 8px;
+    margin-right: 16px;
   }
 }
 
@@ -1987,7 +2001,6 @@ u {
 @media screen and (max-width: 768px) {
   .curso-pg__map {
     margin: 0 0 30px 0;
-    font-size: 9px;
     text-align: center;
   }
 }
@@ -2021,7 +2034,7 @@ u {
 
 .curso-pg__title {
   color: #CFAF67;
-  font-size: 30px;
+  font-size: 32px;
   margin-bottom: 24px;
   font-weight: bold;
   font-family: 'Garamond Bold';
@@ -2031,17 +2044,12 @@ u {
 @media screen and (max-width: 768px) {
   .curso-pg__title {
     font-size: 22px;
+    margin-bottom: 15px;
   }
 }
 
 .curso-pg__desc {
   font-size: 16px;
-}
-
-@media screen and (max-width: 768px) {
-  .curso-pg__desc {
-    font-size: 14px;
-  }
 }
 
 .curso-pg__divisor {
@@ -2066,12 +2074,6 @@ u {
   font-size: 16px;
 }
 
-@media screen and (max-width: 768px) {
-  .curso-pg__content {
-    font-size: 14px;
-  }
-}
-
 .curso-pg__content h3 {
   color: #CFAF67;
   font-size: 32px;
@@ -2082,7 +2084,7 @@ u {
 
 @media screen and (max-width: 768px) {
   .curso-pg__content h3 {
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 
@@ -2175,14 +2177,14 @@ u {
 }
 
 .banner-conheca__desc {
-  font-size: 16px;
+  font-size: 20px;
   max-width: 690px;
   margin: 35px 0 25px;
 }
 
 @media screen and (max-width: 992px) {
   .banner-conheca__desc {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
@@ -2191,7 +2193,7 @@ body {
   margin: 0;
   background-color: #0d1c2c;
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: #fff;
   overflow-x: hidden;

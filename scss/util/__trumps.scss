@@ -9,25 +9,25 @@
 .inner-title{
     color: black;
     font-weight: 500;
-    font-size: 53px;
+    font-size: 62px;
     color: $color-primary;
     font-family: 'Garamond Bold';
     line-height: 0.9;
 
     @media screen and (max-width: $bp-LG){
-        font-size: 38px;
+        font-size: 40px;
     }
 
     span{
         display: block;
         color: #fff;
-        font-size: 35px;
+        font-size: 39px;
         font-family: 'Garamond';
-        letter-spacing: 1.7px;
+        letter-spacing: 1.4px;
         margin-top: 10px;
         
         @media screen and (max-width: $bp-LG){
-            font-size: 22px;
+            font-size: 26px;
             margin-top: 14px;
         }
     }
