@@ -5,11 +5,12 @@
     z-index: 10;
     background-color: $color-dark;
     width: 100vw;
+    display: none;
+    overflow: auto;
     height: 100vh;
     padding-top: 60px;
-    overflow-y: scroll;
-    display: none;
-
+    padding-bottom: 70px;
+    
     &.active{
         display: block;
         animation: fadeIn 0.8s;
@@ -36,6 +37,15 @@
         @media screen and (max-width: $bp-MD){
             top: 5px;
             right: 10px;
+        }
+    }
+
+    .inner-title{
+        font-size: 54px;
+        margin-bottom: 15px;
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 35px;
         }
     }
 }

@@ -21,12 +21,23 @@
 }
 
 .form-group{
+    flex-direction: column;
     margin-bottom: 20px;
+    display: flex;
 
     label{
         color: $color-primary;
         font-weight: bold;
         font-size: 14.5px;
         text-align: left;
+        display: block;
+        
+        &.error{
+            font-weight: lighter;
+            font-size: 13.5px;
+            margin-top: 5px;
+            order: 11;
+        }
     }
 }
+

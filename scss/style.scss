@@ -24,6 +24,11 @@ body {
     color: #fff;
     overflow-x: hidden;
 
+    &.has-modal{
+        max-height: 100vh;
+        overflow: hidden !important;
+    }
+
     @media screen and (max-width: $bp-MD){
         font-size: 15px;
     }

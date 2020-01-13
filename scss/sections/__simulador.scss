@@ -18,11 +18,11 @@
     @media screen and (max-width: $bp-LG){
         padding-top: 60px;
         text-align: center;
+        padding-bottom: 160px;
     }
     
     @media screen and (max-width: $bp-MD){
         padding-top: 40px;
-        padding-left: 15px;
     }
 
     &.active{
@@ -30,7 +30,30 @@
         animation: fadeIn 0.8s;
     }
 
-    &__steps{
+    &__title{
+        padding-top: 10px;
+        padding-left: 80px;
+        font-size: 52px;
+        font-family: 'Garamond Bold';
+        color: #fff;
+
+        
+        @media screen and (max-width: $bp-LG) {
+            margin-top: 20px;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 35px;
+            line-height: 38px;
+            padding-top: 0;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__right{
         padding-left: 80px;
 
         @media screen and (max-width: $bp-XL) {
@@ -42,9 +65,92 @@
         }
     }
 
-    .btn-primary{
-        margin-top: 20px;
+    .btn{
         font-size: 17px;
+        
+        @media screen and (max-width: $bp-MD){
+            white-space: normal;
+        }
+    }
+
+    &__btn-enviar{
+        margin-top: 20px;
         padding: 15px 40px;
     }
+
+    &__resul{
+        display: flex;
+        flex-direction: column;
+
+        .title{
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: -9px;
+        }
+
+        .value{
+            font-size: 15px;
+            color: #CFAF67;
+            font-weight: lighter;
+            margin-bottom: 0px;
+            
+            span{
+                font-size: 32px;
+            }
+        }
+
+        small{
+            font-size: 12px;
+            font-weight: lighter;
+        }
+
+    }
+
+    &__chart{
+        display: flex;
+        position: relative; 
+
+        &-values{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: 'Garamond Bold';
+            color: $color-primary;
+            font-size: 16px;
+            text-align: right;
+            padding-right: 10px;
+            white-space: nowrap;
+
+            @media screen and (max-width: $bp-MD){
+                font-size: 14px;
+                min-width: 100px;
+            }
+        }
+
+        &-box{
+            position: relative;
+            width: 100%;
+            border-left: 1px solid $color-primary;
+            border-bottom: 1px solid $color-primary;
+            
+            canvas{
+                width: 100%;
+                margin-left: -10px;
+            }
+
+            small{
+                position: absolute;
+                left: 0;
+                bottom: -28px;
+                text-align: left;
+                transform: translateY(100%);
+
+                @media screen and (max-width: $bp-XL){
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+    
 }

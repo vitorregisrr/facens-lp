@@ -1,6 +1,7 @@
 .banner-about{
-    padding: 160px 0 200px 0;
+    padding: 130px 0 200px 0;
     margin-top: -40px;
+    margin-bottom: -70px;
     background-color: #0d1824;
     background-image: url('../images/backgrounds/bottom-curves.jpg');
     background-position: bottom left;
@@ -13,7 +14,7 @@
     }
 
     @media screen and (max-width: $bp-MD){
-        padding-top: 80px;
+        padding-top: 50px;
         padding-bottom: 60px;
         margin-bottom: -40px;
     }
@@ -21,9 +22,11 @@
     &__desc{
         font-size: 20px;
         max-width: 650px;
+        margin-top: 35px;
 
         @media screen and (max-width: $bp-LG){
             font-size: 16px;
+            margin-top: 0;
         }
     
     }

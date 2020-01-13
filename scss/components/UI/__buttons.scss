@@ -1,5 +1,5 @@
 .btn {
-    padding: 13px 25px;
+    padding: 15px 25px;
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
@@ -17,7 +17,7 @@
     
     &.btn-lg {
         font-size: 18px;
-        padding: 13px 30px;
+        padding: 14px 37px;
         
         @media screen and (max-width: $bp-LG){
             font-size: 16px;
@@ -65,9 +65,34 @@
         border-radius: 3px;
     }
 
+
+    &.is-big{
+        &:after {
+            width: 98%;
+        }
+    }
+
     &:hover, &:active {
         background-color: darken($color-primary, 2) !important;
         color: #1C2830 !important;
         @include scale(1.03);
     }
+}
+
+.btn-primary--outline{
+    border: 1px solid $color-primary;
+    font-weight: bold;
+    color: $color-primary;
+    background-color: transparent;
+
+    &:hover{
+        color: $color-dark !important;
+        background-color: $color-primary;
+    }
+}
+
+.btn-transparent{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
