@@ -38,7 +38,7 @@
                 $('[data-getter="valor-mensal"]').text('R$ ' + numeral(simulador.data.curso.valor_mensal).format('R$ 0,0').replace(/,/g, '.') + ',00')
                 $('[data-getter="valor-salario"]').text('R$ ' + numeral(simulador.data.curso.valor_salario).format('R$ 0,0').replace(/,/g, '.') + ',00')
                 $('[data-getter="fonte-salario"]').text(simulador.data.curso.fonte_salario);
-                $('[data-getter="pessoa-nome"]').text(simulador.data.usuario);
+                $('[data-getter="pessoa-nome"]').text(simulador.data.form.nome);
                 $('[data-getter="curso-nome"]').text(simulador.data.curso.nome);
                 $('[data-getter="curso-desc"]').text(simulador.data.curso.descricao);
             },
