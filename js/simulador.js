@@ -115,6 +115,9 @@
             },
 
             fetchCurso: () => {
+
+                // Codigo abaixo provisorio, usar o comentado
+                // para uma requisicao real!
                 simulador.data.curso = {
                     nome: 'Especialização em gestão de Energia e eficiência energética',
                     descricao: 'O setor de energia tem recebido altos investimentos graças à demanda de mercado. De olho também para energias renováveis, como a eólica, profissionais deste campo são cada vez mais desejados pelo mercado, segundo as consultorias Hays, Asap e Talenses. O resultado desta procura são os salários que justificam o seu investimento neste curso (confira no gráfico).',
